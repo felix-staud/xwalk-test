@@ -1,5 +1,6 @@
 mountpoints:
   /:
-    url: "https://author-p15404-e146221-cmstg.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xwalk/main"
-    type: "markup"
-    suffix: ".html"
+    url: https://drive.google.com/drive/folders/192hTaWOYC484gahhYdx1yBIkGCCpEJd-
+    # url: "https://author-p15404-e146221-cmstg.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xwalk/main"
+    # type: "markup"
+    # suffix: ".html"
