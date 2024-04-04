@@ -8,6 +8,7 @@ export default function decorate(block) {
   const ul = document.createElement('ul');
   ul.dataset.aueResource = '/core/franklin/components/block/v1/block';
   ul.dataset.aueLabel = 'Cards';
+  ul.dataset.aueType = 'component';
   ul.dataset.aueBehavior = false;
 
   [...block.children].forEach((row, index) => {
