@@ -10,20 +10,24 @@ export default function decorate(block) {
   ul.dataset.aueLabel = 'Cards';
   ul.dataset.aueBehavior = false;
 
-  [...block.children].forEach((row) => {
+  [...block.children].forEach((row, index) => {
     /** @type {AUE.ResourceElement} */
     const li = document.createElement('li');
     moveInstrumentation(row, li);
     li.dataset.aueResource = '/core/franklin/components/block/v1/block/item';
     li.dataset.aueType = 'component';
     li.dataset.aueModel = 'card';
+    li.dataset.aueLabel = `Card #${index + 1}`;
+
     while (row.firstElementChild) li.append(row.firstElementChild);
+
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) div.className = 'cards-card-image';
       else div.className = 'cards-card-body';
     });
     ul.append(li);
   });
+
   ul.querySelectorAll('img').forEach((/** @type {AUE.PropElement} */img) => {
     img.dataset.aueProp = 'image';
     img.dataset.aueType = 'reference';
@@ -32,6 +36,7 @@ export default function decorate(block) {
     moveInstrumentation(img, optimizedPic.querySelector('img'));
     img.closest('picture').replaceWith(optimizedPic);
   });
+
   block.textContent = '';
   block.append(ul);
 }
