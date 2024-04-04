@@ -11,6 +11,7 @@ export default function decorate(block) {
   const h1 = block.querySelector('h1');
   h1.dataset.aueProp = 'text';
   h1.dataset.aueType = 'richtext';
+  h1.dataset.aueLabel = 'Text';
 
   /** @type {AUE.PropElement} */
   const img = block.querySelector('img');
