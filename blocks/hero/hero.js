@@ -1,5 +1,5 @@
 /**
- * @param {HTMLElement & AUE.ResourceAttributes} block
+ * @param {AUE.ResourceElement} block
  */
 export default function decorate(block) {
   block.dataset.aueResource = 'urn:aemconnection:/core/franklin/components/block/v1/block';
@@ -7,12 +7,12 @@ export default function decorate(block) {
   block.dataset.aueType = 'component';
   block.dataset.aueLabel = 'Hero';
 
-  /** @type {HTMLHeadingElement & AUE.PropAttributes} */
+  /** @type {AUE.PropElement} */
   const h1 = block.querySelector('h1');
   h1.dataset.aueProp = 'text';
   h1.dataset.aueType = 'richtext';
 
-  /** @type {HTMLImageElement & AUE.PropAttributes} */
+  /** @type {AUE.PropElement} */
   const img = block.querySelector('img');
   img.dataset.aueProp = 'image';
   img.dataset.aueType = 'reference';
