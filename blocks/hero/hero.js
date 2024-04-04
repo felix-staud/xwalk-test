@@ -16,4 +16,5 @@ export default function decorate(block) {
   const img = block.querySelector('img');
   img.dataset.aueProp = 'image';
   img.dataset.aueType = 'reference';
+  img.dataset.aueLabel = 'Image';
 }
