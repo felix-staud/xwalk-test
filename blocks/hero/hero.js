@@ -18,4 +18,5 @@ export default function decorate(block) {
   img.dataset.aueProp = 'image';
   img.dataset.aueType = 'reference';
   img.dataset.aueLabel = 'Image';
+  img.dataset.aueBehaviour = 'true';
 }
